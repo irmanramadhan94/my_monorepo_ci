@@ -1,0 +1,49 @@
+name: Build & Test
+
+on:
+  push:
+    branches: [main]
+
+jobs:
+  build:
+    runs-on: ubuntu-latest
+    name: Build Web App
+
+    steps:
+      - uses: actions/checkout@v4
+
+      - name: Setup Node.js
+        uses: actions/setup-node@v4
+        with:
+          node-version: 18
+
+      - name: Install dependencies (all workspaces)
+        run: npm install
+
+      - name: Build web-app
+        run: npm run --workspace=apps/web-app build
+
+  test:
+    runs-on: ubuntu-latest
+    name: Run Cypress Tests
+    needs: build
+
+    steps:
+      - uses: actions/checkout@v4
+
+      - name: Setup Node.js
+        uses: actions/setup-node@v4
+        with:
+          node-version: 18
+
+      - name: Install dependencies (all workspaces)
+        run: npm install
+
+      - name: Start web server
+        run: |
+          npm install -g serve
+          serve -s apps/web-app/build & # atau dist jika pakai Vite/Nuxt
+          sleep 5
+
+      - name: Run Cypress tests
+        run: npm run --workspace=tests/cypress test
