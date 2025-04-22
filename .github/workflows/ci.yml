@@ -49,5 +49,5 @@ jobs:
           sleep 5
 
       - name: Run Cypress tests
-        run: npm test
+        run: npx cypress run
         working-directory: tests/cypress
