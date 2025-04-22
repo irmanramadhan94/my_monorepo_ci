@@ -3,8 +3,8 @@
     "private": true,
     "workspaces": [
       "apps/*",
-      "tests/*"
-      
+      "tests/*",
+      "tests/cypress"
     ],
     "scripts": {
         "web": "npm run start --workspace=apps/web-app",
