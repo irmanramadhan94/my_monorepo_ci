@@ -1,0 +1,23 @@
+{
+  "name": "cypress_mentoring",
+  "version": "1.0.0",
+  "description": "automation test fitur mentoring with cypress",
+  "homepage": "https://github.com/irmanramadhan94/cypress_mentoring#readme",
+  "bugs": {
+    "url": "https://github.com/irmanramadhan94/cypress_mentoring/issues"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/irmanramadhan94/cypress_mentoring.git"
+  },
+  "license": "ISC",
+  "author": "Irman Ramadhan",
+  "type": "commonjs",
+  "main": "index.js",
+  "scripts": {
+    "test": "cypress run"
+  },
+  "devDependencies": {
+    "cypress": "^14.3.1"
+  }
+}
