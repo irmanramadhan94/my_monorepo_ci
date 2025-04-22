@@ -67,4 +67,4 @@ jobs:
         run: chmod +x ./node_modules/.bin/cypress
       
       - name: Run Cypress tests
-        run: npx cypress run --project tests/cypress
+        uses: cypress-io/github-action@v6
