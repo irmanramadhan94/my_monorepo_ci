@@ -36,7 +36,7 @@ jobs:
     steps:
       - uses: actions/checkout@v4
         with:
-         path: .
+         path: my-monorepo
 
       - name: Setup Node.js
         uses: actions/setup-node@v4
@@ -47,6 +47,7 @@ jobs:
         run: npm install --workspaces --include-workspace-root
 
       - name: Start web server
+        working-directory: my-monorepo
         run: |
           npm install -g serve
           serve -s apps/web-app/build & # atau dist jika pakai Vite/Nuxt
@@ -56,6 +57,7 @@ jobs:
         run: ls -R    
 
       - name: Install Cypress
+        working-directory: my-monorepo
         run: npm install cypress
 
       - name: Run Cypress tests
