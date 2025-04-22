@@ -44,6 +44,7 @@ jobs:
           node-version: 18
 
       - name: Install dependencies (all workspaces)
+        working-directory: my-monorepo
         run: npm install --workspaces --include-workspace-root
 
       - name: Start web server
