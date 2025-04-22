@@ -4,6 +4,7 @@
     "workspaces": [
       "apps/*",
       "tests/*"
+      
     ],
     "scripts": {
         "web": "npm run start --workspace=apps/web-app",
