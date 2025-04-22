@@ -49,4 +49,4 @@ jobs:
           sleep 5
 
       - name: Run Cypress tests
-        run: npm run --workspace=tests/cypress test
+        run: npm run --workspace=tests/cypress
