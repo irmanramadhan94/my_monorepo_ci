@@ -8,7 +8,7 @@
     ],
     "scripts": {
         "web": "npm run start --workspace=apps/web-app",
-        "test": "npx cypress run"
+        "test": "npx cypress run --project tests/cypress"
 }
   }
   
