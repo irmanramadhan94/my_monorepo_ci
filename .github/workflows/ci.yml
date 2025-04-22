@@ -56,6 +56,8 @@ jobs:
       - name: Install Cypress
         run: npm install cypress
 
+      - name: Debug folder structure
+        run: find . | sort
+      
       - name: Run Cypress tests
-        working-directory: /tests/cypress
-        run: npx cypress run
+        run: npx cypress run --project tests/cypress
