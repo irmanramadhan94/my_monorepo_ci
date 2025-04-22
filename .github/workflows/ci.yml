@@ -18,7 +18,10 @@ jobs:
           node-version: 18
 
       - name: Install dependencies (all workspaces)
-        run: npm install
+        run: npm install --workspaces --include-workspace-root
+
+      - name: Fix permission for react-scripts
+        run: chmod +x node_modules/.bin/react-scripts
 
       - name: Build web-app
         run: npm run --workspace=apps/web-app build
@@ -37,7 +40,7 @@ jobs:
           node-version: 18
 
       - name: Install dependencies (all workspaces)
-        run: npm install
+        run: npm install --workspaces --include-workspace-root
 
       - name: Start web server
         run: |
