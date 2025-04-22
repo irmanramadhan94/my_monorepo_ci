@@ -56,6 +56,9 @@ jobs:
       - name: Install Cypress
         run: npm install cypress
 
+      - name: Install Cypress binary
+        run: npx cypress install 
+
       - name: Debug folder structure
         run: find . | sort
 
