@@ -4,6 +4,10 @@
     "workspaces": [
       "apps/*",
       "tests/*"
-    ]
+    ],
+    "scripts": {
+        "web": "npm run start --workspace=apps/web-app",
+        "test": "npm run cypress --workspace=tests/cypress"
+}
   }
   
