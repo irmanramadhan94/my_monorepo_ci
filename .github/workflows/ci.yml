@@ -47,7 +47,10 @@ jobs:
           npm install -g serve
           serve -s apps/web-app/build & # atau dist jika pakai Vite/Nuxt
           sleep 5
-          
+
+      - name: List directory structure
+        run: ls -R    
+        
       - name: Install Cypress
         run: npm install cypress
 
