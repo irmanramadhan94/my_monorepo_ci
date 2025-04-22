@@ -11,6 +11,8 @@ jobs:
 
     steps:
       - uses: actions/checkout@v4
+        with:
+          path: .
 
       - name: Setup Node.js
         uses: actions/setup-node@v4
@@ -50,7 +52,7 @@ jobs:
 
       - name: List directory structure
         run: ls -R    
-        
+
       - name: Install Cypress
         run: npm install cypress
 
