@@ -67,4 +67,4 @@ jobs:
         run: chmod +x ./node_modules/.bin/cypress
       
       - name: Run Cypress tests
-        run: npx cypress run --project my_monorepo_ci/tests/cypress
+        run: npx cypress run --project ./tests/cypress
