@@ -36,8 +36,8 @@ jobs:
     steps:
       - uses: actions/checkout@v4
         with:
-         path: .
-         
+         path: my-monorepo
+
       - name: Setup Node.js
         uses: actions/setup-node@v4
         with:
@@ -59,5 +59,5 @@ jobs:
         run: npm install cypress
 
       - name: Run Cypress tests
-        working-directory: tests/cypress
+        working-directory: my-monorepo/tests/cypress
         run: npx cypress run
