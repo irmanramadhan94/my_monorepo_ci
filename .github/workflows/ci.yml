@@ -58,6 +58,9 @@ jobs:
 
       - name: Debug folder structure
         run: find . | sort
+
+      - name: Fix Cypress permission
+        run: chmod +x ./node_modules/.bin/cypress
       
       - name: Run Cypress tests
         run: npx cypress run --project tests/cypress
